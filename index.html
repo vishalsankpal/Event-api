@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <!--[if lt IE 9]>
+                <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <![endif]-->
+        <meta name="description" content="Free Web tutorials">
+        <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+        <meta name="author" content="John Doe">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Fontawesome -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- https://fontawesome.com/v4.7.0/icons/ -->
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/mediaquery.css">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <title>Event Brite</title>
+        <style>
+            .event-title {
+                font-size: 20px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <section>
+            <div class="container">
+                <div id="search-events">
+                    <div class="form-group">
+                        <input type="text" name="" id="event-name" class="form-control"
+                            placeholder="Write city or country name or event name">
+                    </div>
+                    <div class="form-group">
+                        <select name="" id="category" class="form-control"></select>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="search" id="submitBtn" >
+                    </div>
+                </div>
+                <p id="demo"></p>
+                <div id="result" class="row m-5"></div>
+                
+            </div>
+        </section>
+        <!-- event list -->
+        <!-- https://www.eventbriteapi.com/v3/events/search/?q=mumbai&token=2LSZIBROSZYZHUJVLOZA -->
+        <!-- event api with name and category list -->
+        <!-- https://www.eventbriteapi.com/v3/events/search/?q=india&sort_by=date&categories=118&token=2LSZIBROSZYZHUJVLOZA -->
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <!-- <script>
+
+                document.querySelector('#submitBtn').addEventListener('click',function(){
+                    if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                  } else { 
+                    x.innerHTML = "Geolocation is not supported by this browser.";
+                  }
+                }) 
+                
+                function showPosition(position) {
+                  const lat = position.coords.latitude ; 
+                  const log = position.coords.longitude;
+                  console.log(`${lat} ${log}`)
+                }
+                
+                        </script> -->
+        <script src="./js/eventbrite.js"></script>
+        <script src="./js/ui.js"></script>
+        <script src="./js/app.js"></script>
+        
+    </body>
+
+</html>
